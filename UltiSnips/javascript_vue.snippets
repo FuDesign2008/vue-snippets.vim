@@ -1,0 +1,115 @@
+
+extends javascript
+
+#
+# vue
+#
+
+snippet vuecomp  "create component for .vue" !
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+// import { mapState, mapGetters, mapActions } from 'vuex'
+
+export default {
+  // name: '',
+
+  // el: '#id',
+
+  // components: {},
+
+  // props: {},
+
+  // mixins: [],
+
+  data() {
+    return {
+      // TODO
+    }
+  },
+
+  computed: {
+    withSetter: {
+      get() {
+        // TODO
+      },
+      set(/* value */) {
+        // TODO
+      },
+    },
+
+    // TODO
+  },
+
+  watch: {
+    // TODO
+  },
+
+  methods: {
+    fetchData() {
+      // TODO
+    },
+    // TODO
+  },
+
+  filters: {
+    // TODO
+  },
+
+  /**
+   * life cycle
+   */
+  // beforeCreate() {},
+  created() {
+    this.fetchData()
+  },
+  // beforeMount() {},
+  // mounted() {},
+  // beforeUpate() {},
+  // updated() {},
+  // beforeDestroy() {},
+  // destroyed() {},
+}
+endsnippet
+
+snippet vuexm "create vuex module"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+export default {
+  namespaced: true,
+
+  state() {
+    return {
+      // TODO
+    }
+  },
+
+  getters: {
+    g(/* state, getters, rootState, rootGetters */) {
+      // TODO
+    },
+  },
+
+  mutations: {
+    m(/* state, payload */) {
+      // TODO
+    },
+  },
+
+  actions: {
+    a(/* { dispatch, commit, state, getters, rootState, rootGetters }, payload */) {
+      // TODO
+    },
+  },
+
+  modules: {
+    // TODO
+  },
+}
+endsnippet
