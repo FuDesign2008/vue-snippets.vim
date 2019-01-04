@@ -1,2 +1,3 @@
-# vue-snippets.vim
-snippets for vue
+# fu-vue-snippets.vim
+
+My snippets for vue
