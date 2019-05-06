@@ -1,0 +1,35 @@
+extends javascript
+
+snippet prop "vue prop" b
+  propName: {
+    type: Number,
+    required: true
+  },
+endsnippet
+
+snippet propdef "vue prop with default value" b
+  propName: {
+    type: Number,
+    default: 100,
+  },
+endsnippet
+
+snippet propdefault "vue prop with default object" b
+  propName: {
+    type: Object,
+    default() {
+      return { message: 'hello' }
+    },
+  },
+endsnippet
+
+snippet propdefault "vue prop with validator" b
+  propName: {
+    default: 'success',
+    validator(value) {
+      // The value must match one of these strings
+      return ['success', 'warning', 'danger'].indexOf(value) !== -1
+    },
+endsnippet
+
+
