@@ -4,7 +4,7 @@ extends javascript
 # axios
 #
 
-snippet axios "async fetch data with axios" !
+snippet axios "async get data with axios" !
   async fetchData({ commit }, { param }) {
     const url = 'TODO'
 
@@ -18,8 +18,22 @@ snippet axios "async fetch data with axios" !
   },
 endsnippet
 
+snippet axiospost "async post data with axios" b
+  async postData({ commit }, { param }) {
+    const url = 'TODO'
 
-snippet axiosform "async upload form data  with axios" !
+    const response = await axios.post(url, {
+      param,
+    })
+    const { data } = response
+
+    commit('setData', data)
+    return data
+  },
+endsnippet
+
+
+snippet axiosform "async post form data  with axios" !
   async uploadFormData({ commit }, { uploadData }) {
     const url = 'TODO'
 
@@ -55,7 +69,7 @@ snippet axiosfile "async upload file with axios" !
 endsnippet
 
 
-snippet axiossearch "async upload data as URLSearchParams with axios" !
+snippet axiossearch "async post URLSearchParams data with axios" !
   async uploadData({ commit }, { uploadData }) {
     const url = 'TODO'
     const params = new URLSearchParams(uploadData)

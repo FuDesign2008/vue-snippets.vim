@@ -14,6 +14,19 @@ const theObj = {
     return data
   },
 
+  // axiospost
+  async postData({ commit }, { param }) {
+    const url = 'TODO'
+
+    const response = await axios.post(url, {
+      param,
+    })
+    const { data } = response
+
+    commit('setData', data)
+    return data
+  },
+
   // axiosform
   async uploadFormData({ commit }, { uploadData }) {
     const url = 'TODO'

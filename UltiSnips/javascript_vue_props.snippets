@@ -14,6 +14,15 @@ snippet propdef "vue prop with default value" b
   },
 endsnippet
 
+snippet propdefau "vue prop with default array" b
+  propName: {
+    type: Array,
+    default() {
+      return []
+    },
+  },
+endsnippet
+
 snippet propdefault "vue prop with default object" b
   propName: {
     type: Object,
@@ -22,6 +31,7 @@ snippet propdefault "vue prop with default object" b
     },
   },
 endsnippet
+
 
 snippet propvalid "vue prop with validator" b
   propName: {
