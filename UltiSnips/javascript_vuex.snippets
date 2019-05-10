@@ -44,3 +44,41 @@ export default {
   },
 }
 endsnippet
+
+snippet mapStat "mapState with array" b
+  ...mapState('moduleName', ['name1', 'name2']),
+endsnippet
+
+snippet mapState "mapState with alias" b
+  ...mapState('moduleName', {
+    nameAlias: 'name',
+
+    newName(state) {
+      return state.name + this.name
+    },
+  }),
+endsnippet
+
+snippet mapGetter "mapGetters with array" b
+  ...mapGetters('moduleName', ['name1', 'name2']),
+endsnippet
+
+snippet mapGetters "mapGetters with alias" b
+  ...mapGetters('moduleName', {
+    nameAlias: 'name',
+  }),
+endsnippet
+
+snippet mapAction "mapActions with array" b
+  ...mapActions('moduleName', ['name1', 'name2']),
+endsnippet
+
+snippet mapActions "mapActions with alias" b
+  ...mapActions('moduleName', {
+    nameAlias: 'name',
+  }),
+endsnippet
+
+snippet vuex "import {mapState...} from vuex" b
+import { mapState, mapGetters, mapActions } from 'vuex'
+endsnippet
