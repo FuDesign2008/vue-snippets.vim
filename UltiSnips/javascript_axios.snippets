@@ -18,20 +18,6 @@ snippet axios "async get data with axios" !
   },
 endsnippet
 
-snippet axiosput "async put data with axios" b
-  async putData({ commit }, { param }) {
-    const url = 'TODO'
-
-    const response = await axios.put(url, {
-      param,
-    })
-    const { data } = response
-
-    commit('setData', data)
-    return data
-  },
-endsnippet
-
 snippet axiospost "async post data with axios" b
   async postData({ commit }, { param }) {
     const url = 'TODO'
