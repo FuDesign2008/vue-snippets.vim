@@ -1,0 +1,56 @@
+
+extends typescript
+
+snippet vuexmod "create vuex Module class"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
+
+/* tslint:disable:member-ordering */
+
+@Module({
+  namespaced: true,
+  stateFactory: true,
+})
+class `!v expand('%:t:r')` extends VuexModule {
+  /**************************************************************************
+   * state
+   **************************************************************************/
+
+  name: string = ''
+  ${VISUAL}$0
+
+  /**************************************************************************
+   * getters
+   **************************************************************************/
+
+  get theName() {
+    return this.name
+  }
+
+  /**************************************************************************
+   * muations
+   **************************************************************************/
+
+  @Mutation
+  setName(name: string) {
+    this.name = name
+  }
+
+  /**************************************************************************
+   * actions
+   **************************************************************************/
+
+  @Action({ commit: 'setName' })
+  async fetchName() {
+    const url = 'TODO'
+    const response = await axios.get(url)
+    return response.data
+  }
+}
+
+export default  `!v expand('%:t:r')`
+endsnippet
