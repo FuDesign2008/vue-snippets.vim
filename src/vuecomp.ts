@@ -31,7 +31,11 @@ class ComponentName extends Vue /*mixins(ComponentNameMixin) */ {
    **************************************************************************/
 
   // @Prop({ type: String, required: true })
-  // private readonly propName!: string
+  // private readonly requiredProp!: string
+  // @Prop({ type: String, default: '' })
+  // private readonly propWithDefault!: string
+  // @Prop({ type: String })
+  // private readonly prop: string | undefined
 
   /**************************************************************************
    * vuex map state / getters / actions
@@ -93,7 +97,7 @@ class ComponentName extends Vue /*mixins(ComponentNameMixin) */ {
    **************************************************************************/
 
   // beforeCreate() {},
-  created() {
+  public created() {
     this.fetchData()
   }
   // beforeMount() {},
