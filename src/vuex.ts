@@ -3,6 +3,7 @@
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
+import axios, { AxiosResponse } from 'axios'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
 /* tslint:disable:member-ordering */
@@ -42,7 +43,7 @@ class ModuleName extends VuexModule {
   @Action({ commit: 'setName' })
   async fetchName() {
     const url = 'TODO'
-    const response = await axios.get(url)
+    const response: AxiosResponse = await axios.get(url)
     return response.data
   }
 }
