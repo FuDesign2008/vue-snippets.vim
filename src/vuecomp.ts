@@ -96,16 +96,16 @@ class ComponentName extends Vue /*mixins(ComponentNameMixin) */ {
    * life cycle
    **************************************************************************/
 
-  // beforeCreate() {},
+  // beforeCreate() {}
   public created() {
     this.fetchData()
   }
-  // beforeMount() {},
-  // mounted() {},
-  // beforeUpate() {},
-  // updated() {},
-  // beforeDestroy() {},
-  // destroyed() {},
+  // beforeMount() {}
+  // mounted() {}
+  // beforeUpate() {}
+  // updated() {}
+  // beforeDestroy() {}
+  // destroyed() {}
 }
 
 export default ComponentName
