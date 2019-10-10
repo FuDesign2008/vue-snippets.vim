@@ -80,7 +80,7 @@ class ComponentName extends Vue /*mixins(ComponentNameMixin) */ {
    **************************************************************************/
 
   // @Watch('dataName')
-  // dataNameOnChange(newValue: number, oldValue: number) {
+  // dataNameOnChange(newValue: number, oldValue: number): void {
   // TODO
   // }
 

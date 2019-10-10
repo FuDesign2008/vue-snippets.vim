@@ -39,7 +39,7 @@ class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
   // @Prop({ type: String, default: '' })
   // private readonly propWithDefault!: string
   // @Prop({ type: String })
-  // private readonly prop: string | undefined
+  // private readonly prop!: string | undefined
 
   /**************************************************************************
    * vuex map state / getters / actions
@@ -85,7 +85,7 @@ class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
    **************************************************************************/
 
   // @Watch('dataName')
-  // dataNameOnChange(newValue: number, oldValue: number) {
+  // dataNameOnChange(newValue: number, oldValue: number): void {
   // TODO
   // }
 
@@ -93,7 +93,7 @@ class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
    * methods
    **************************************************************************/
 
-  private async fetchData() {
+  private async fetchData(): Promise<void> {
     // TODO
   }
 
@@ -101,16 +101,16 @@ class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
    * life cycle
    **************************************************************************/
 
-  // beforeCreate() {}
-  created() {
+  // beforeCreate(): void {}
+  created(): void {
     this.fetchData()
   }
-  // beforeMount() {}
-  // mounted() {}
-  // beforeUpate() {}
-  // updated() {}
-  // beforeDestroy() {}
-  // destroyed() {}
+  // beforeMount(): void {}
+  // mounted(): void {}
+  // beforeUpate(): void {}
+  // updated(): void {}
+  // beforeDestroy(): void {}
+  // destroyed():void {}
 }
 
 export default `!v expand('%:t:r')`
