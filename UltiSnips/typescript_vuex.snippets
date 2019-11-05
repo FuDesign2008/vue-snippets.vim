@@ -33,7 +33,7 @@ class `!v expand('%:t:r')` extends VuexModule {
   }
 
   /**************************************************************************
-   * muations
+   * mutaions
    **************************************************************************/
 
   @Mutation
@@ -54,4 +54,11 @@ class `!v expand('%:t:r')` extends VuexModule {
 }
 
 export default  `!v expand('%:t:r')`
+endsnippet
+
+snippet mutationts "vuex mutation opertation in ts"
+  @Mutation
+  setName(name: string) {
+    this.name = name
+  }
 endsnippet
