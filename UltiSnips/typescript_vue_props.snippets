@@ -1,26 +1,40 @@
 extends typescript
 
 snippet propts "vue prop in ts" b
-  @Prop({ type: Number, required: true })
+  @Prop({
+    type: Number,
+    required: true
+  })
   private readonly propName!: number
 endsnippet
 
 snippet propdefts "vue prop with default value in ts" b
-  @Prop({ type: Number, default: 100 })
+  @Prop({
+    type: Number,
+    default: 100
+  })
   private readonly propName!: number
+
 endsnippet
 
 snippet propdefauts "vue prop with default array in ts" b
-  @Prop({ type: Array, default: () => [] })
+  @Prop({
+    type: Array,
+    default: () => []
+  })
   private readonly propName!: any[]
+
 endsnippet
 
 snippet propdefaultts "vue prop with default object in ts" b
   @Prop({
     type: Object,
-    default: () => {message: 'hello'}
+    default: () => {
+      message: 'hello'
+    }
   })
   private readonly propName!: object
+
 endsnippet
 
 
