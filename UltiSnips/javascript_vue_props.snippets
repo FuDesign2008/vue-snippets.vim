@@ -1,44 +1,159 @@
 extends javascript
 
-snippet prop "vue prop" b
+snippet propbool "vue prop with required Boolean" b
+  propName: {
+    type: Boolean,
+    required: true
+  },
+
+endsnippet
+
+
+snippet propbooldef "vue prop with default Boolean" b
+  propName: {
+    type: Boolean,
+    default: false,
+  },
+
+endsnippet
+
+
+snippet propnum "vue prop with required Number" b
   propName: {
     type: Number,
     required: true
   },
+
 endsnippet
 
-snippet propdef "vue prop with default value" b
+
+snippet propnumdef "vue prop with default Number" b
   propName: {
     type: Number,
-    default: 100,
+    default: 0,
   },
+
 endsnippet
 
-snippet propdefau "vue prop with default array" b
+snippet propsnumval "vue prop with Number validator" b
+  propName: {
+    type: Number,
+    required: false,
+    default: 0,
+    validator(value) {
+      const validValues = [
+        // TODO
+      ]
+      return validValues.include(value)
+    },
+  },
+
+endsnippet
+
+
+snippet propstr "vue prop  with required String" b
+  propName: {
+    type: String,
+    required: true
+  },
+
+endsnippet
+
+snippet propstrdef "vue prop with default String" b
+  propName: {
+    type: String,
+    default: 'default',
+  },
+
+endsnippet
+
+snippet propstrval "vue prop with String validator" b
+  propName: {
+    type: String,
+    required: false,
+    default: 'default',
+    validator(value) {
+      const validValues = [
+        // TODO
+      ]
+      return validValues.include(value)
+    },
+  },
+
+endsnippet
+
+
+snippet proparr "vue prop with required Array" b
+  propName: {
+    type: Array,
+    required: true
+  },
+
+endsnippet
+
+snippet proparrdef "vue prop with default Array" b
   propName: {
     type: Array,
     default() {
-      return []
+      const arr = [
+        // TODO
+      ]
+      return arr
     },
+  },
+
+endsnippet
+
+snippet proparrval "vue prop with Array validator" b
+  propName: {
+    type: Array,
+    required: false,
+    default() {
+      const arr = [
+        // TODO
+      ]
+      return arr
+    },
+    validator(arr) {
+      return arr.every((item) => {
+        // TODO
+      })
+    },
+  },
+
+endsnippet
+
+snippet propobj "vue prop with required Object" b
+  propName: {
+    type: Object,
+    required: true
   },
 endsnippet
 
-snippet propdefault "vue prop with default object" b
+snippet propobjdef "vue prop with default Object" b
   propName: {
     type: Object,
     default() {
-      return { message: 'hello' }
+      return {
+        // TODO
+      }
     },
   },
 endsnippet
 
 
-snippet propvalid "vue prop with validator" b
+
+snippet propobjval "vue prop with Object validator" b
   propName: {
-    default: 'success',
-    validator(value) {
-      // The value must match one of these strings
-      return ['success', 'warning', 'danger'].indexOf(value) !== -1
+    type: Object,
+    required: false,
+    default() {
+      return {
+        // TODO
+      }
+    },
+    validator(obj) {
+      // TODO
     },
   },
 endsnippet
