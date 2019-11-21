@@ -1,0 +1,68 @@
+extends javascript
+
+snippet provide "vue provide" b
+  // provide should be placed before prop and data
+  provide() {
+    return {
+      name: 'value'
+      [symbol]: 'value'
+      // TODO
+    }
+  },
+
+endsnippet
+
+
+snippet inject "vue inject with array" b
+  // inject should be placed before prop and data
+  inject: [ 'name' ],
+
+endsnippet
+
+snippet injectsym "vue inject with symbol" b
+  // inject should be placed before prop and data
+  inject: { symbol },
+
+endsnippet
+
+
+snippet injectdef "vue inject with default value" b
+  // inject should be placed before prop and data
+  inject: {
+    name: {
+      // from: 'name',
+      default: 'default',
+    }
+  },
+
+endsnippet
+
+snippet injectdefobj "vue inject with default object" b
+  // inject should be placed before prop and data
+  inject: {
+    name: {
+      // from: 'name',
+      default () {
+        return {
+          // TODO
+        }
+      },
+    },
+  },
+
+endsnippet
+
+snippet injectdefarr "vue inject with default array" b
+  // inject should be placed before prop and data
+  inject: {
+    name: {
+      // from: 'name',
+      default () {
+        return [
+          // TODO
+        ]
+      },
+    },
+  },
+
+endsnippet

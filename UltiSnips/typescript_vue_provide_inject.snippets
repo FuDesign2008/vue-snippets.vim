@@ -1,0 +1,74 @@
+extends typescript
+
+snippet Provideblock "vue @Provide block" b
+  /**************************************************************************
+   * provide
+   **************************************************************************/
+
+  @Provide()
+  readonly name = 'value'
+
+endsnippet
+
+snippet Injectblock "vue @Inject block" b
+  /**************************************************************************
+   * inject
+   **************************************************************************/
+
+  @Inject()
+  private readonly name!: string
+
+endsnippet
+
+snippet Provide "vue @Provide" b
+  @Provide()
+  readonly name = 'value'
+
+endsnippet
+
+snippet Inject "vue @Inject" b
+  @Inject()
+  private readonly name!: string
+
+endsnippet
+
+snippet Injectsym "vue @Inject with Symbol" b
+  @Inject(symbol)
+  private readonly name!: string
+
+endsnippet
+
+snippet Injectdef "vue @Inject with default value" b
+  @Inject({
+    // from: 'name',
+    default: 'default',
+  })
+  private readonly name!: string
+
+endsnippet
+
+snippet Injectdefobj "vue @Inject with default object" b
+  @Inject({
+    // from: 'name',
+    default () {
+      return {
+        // TODO
+      }
+    },
+  })
+  private readonly name!: object
+
+endsnippet
+
+snippet Injectdefarr "vue @Inject with default array" b
+  @Inject({
+    // from: 'name',
+    default () {
+      return [
+        // TODO
+      ]
+    },
+  })
+  private readonly name!: any[]
+
+endsnippet

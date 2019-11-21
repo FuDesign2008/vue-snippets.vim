@@ -1,7 +1,7 @@
 
 extends typescript
 
-snippet vuexMod "create vuex @Module class"
+snippet vuexModule "define vuex @Module"
 /**
  *
  * @author fuyg
@@ -45,7 +45,9 @@ class `!v expand('%:t:r')` extends VuexModule {
    * actions
    **************************************************************************/
 
-  @Action({ commit: 'setName' })
+  @Action({
+    commit: 'setName'
+  })
   async fetchName() {
     const url = 'TODO'
     const response: AxiosResponse = await axios.get(url)
@@ -56,9 +58,24 @@ class `!v expand('%:t:r')` extends VuexModule {
 export default  `!v expand('%:t:r')`
 endsnippet
 
-snippet vuexMut "vuex @Mutation opertation in ts"
+
+snippet vuexMutation "define vuex @Mutation"
   @Mutation
   setName(name: string) {
     this.name = name
   }
 endsnippet
+
+
+snippet vuexAction "define vuex @Action"
+  @Action({
+    commit: 'setName'
+  })
+  async fetchName() {
+    const url = 'TODO'
+    const response: AxiosResponse = await axios.get(url)
+    return response.data
+  }
+endsnippet
+
+
