@@ -1,0 +1,85 @@
+
+extends typescript
+
+snippet State "map vuex @State"
+  @State
+  private readonly name!: string
+endsnippet
+
+snippet Stateali "map vuex @State with alias"
+  @State('name')
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Statefun "map vuex @State with function"
+  @State(state => state.name)
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Statemod "map vuex @storeModule.State"
+  @storeModule.State
+  private readonly name!: string
+endsnippet
+
+snippet Statemodali "map vuex @storeModule.State with alias"
+  @storeModule.State('name')
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Statemodfun "map vuex @storeModule.State with function"
+  @storeModule.State(state => state.name)
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Getter "map vuex @Getter"
+  @Getter
+  private readonly name!: string
+endsnippet
+
+snippet Getterali "map vuex @Getter with alias"
+  @Getter('name')
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Gettermod "map vuex @storeModule.Getter"
+  @storeModule.Getter
+  private readonly name!: string
+endsnippet
+
+snippet Gettermodali "map vuex @storeModule.Getter with alias"
+  @storeModule.Getter('name')
+  private readonly aliasName!: string
+
+endsnippet
+
+snippet Action "map vuex @Action"
+  @Action
+  private actionName!: () => Promise<void>
+
+endsnippet
+
+snippet Actionali "map vuex @Action with alias"
+  @Action('actionName')
+  private aliasName!: () => Promise<void>
+
+endsnippet
+
+snippet Actionmod "map vuex @storeModule.Action"
+  @storeModule.Action
+  private actionName!: () => Promise<void>
+
+endsnippet
+
+snippet Actionmodali "map vuex @storeModule.Action with alias"
+  @storeModule.Action('actionName')
+  private aliasName!: () => Promise<void>
+
+endsnippet
+
+
+
