@@ -26,17 +26,59 @@ snippet Provide "vue @Provide" b
 
 endsnippet
 
+snippet Providesym "vue @Provide with symbol" b
+  @Provide(symbol)
+  readonly name = 'value'
+
+endsnippet
+
 snippet Inject "vue @Inject" b
   @Inject()
   private readonly name!: string
 
 endsnippet
 
-snippet Injectsym "vue @Inject with Symbol" b
+snippet Injectsym "vue @Inject with symbol" b
   @Inject(symbol)
   private readonly name!: string
 
 endsnippet
+
+snippet Injectsymdef "vue @Inject with symbol and default value" b
+  @Inject({
+    from: symbol,
+    default: 'default'
+  })
+  private readonly name!: string
+
+endsnippet
+
+snippet Injectsymdefarr "vue @Inject with symbol and default array" b
+  @Inject({
+    from: symbol,
+    default() {
+      return [
+        // TODO
+      ]
+    }
+  })
+  private readonly name!: any[]
+
+endsnippet
+
+snippet Injectsymdefobj "vue @Inject with symbol and default object" b
+  @Inject({
+    from: symbol,
+    default() {
+      return {
+        // TODO
+      }
+    }
+  })
+  private readonly name!: object
+
+endsnippet
+
 
 snippet Injectdef "vue @Inject with default value" b
   @Inject({

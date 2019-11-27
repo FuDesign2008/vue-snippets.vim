@@ -21,7 +21,60 @@ endsnippet
 
 snippet injectsym "vue inject with symbol" b
   // inject should be placed before prop and data
-  inject: { symbol },
+  inject: {
+    symbol
+  },
+
+endsnippet
+
+snippet injectsym "vue inject with symbol and alias" b
+  // inject should be placed before prop and data
+  inject: {
+    aliasName: {
+      from: symbol
+    }
+  },
+
+endsnippet
+
+snippet injectsymdef "vue inject with symbol and default value" b
+  // inject should be placed before prop and data
+  inject: {
+    aliasName: {
+      from: symbol
+      default: 'default'
+    }
+  },
+
+endsnippet
+
+snippet injectsymdefobj "vue inject with symbol and default object" b
+  // inject should be placed before prop and data
+  inject: {
+    aliasName: {
+      from: symbol
+      default () {
+        return {
+          // TODO
+        }
+      }
+    }
+  },
+
+endsnippet
+
+snippet injectsymdefarr "vue inject with symbol and default array" b
+  // inject should be placed before prop and data
+  inject: {
+    aliasName: {
+      from: symbol
+      default () {
+        return [
+          // TODO
+        ]
+      }
+    }
+  },
 
 endsnippet
 
