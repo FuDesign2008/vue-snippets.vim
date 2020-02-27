@@ -51,3 +51,65 @@ snippet template "create .vue with standalone typescript"
 
 </style>
 endsnippet
+
+
+# 以下内容针对wepy
+
+snippet wpytempl "create .wpy with standalone javascript and style"
+<template>
+  <view class="component-name">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./ComponentName.comp.js">
+</script>
+<style lang="scss" src="./ComponentName.comp.scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplts "create .wpy with standalone typescript and style"
+<template>
+  <view class="component-name">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./ComponentName.comp.ts" lang="ts">
+</script>
+<style lang="scss" src="./ComponentName.comp.scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplate "create .wpy with standalone javascript"
+<template>
+  <view class="component-name">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./ComponentName.comp.js">
+</script>
+<style lang="scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplate "create .wpy with standalone typescript"
+<template>
+  <view class="component-name">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./ComponentName.comp.ts" lang="ts">
+</script>
+<style lang="scss" scoped>
+
+</style>
+endsnippet
+
+
+snippet wpyrepeat "Wepy 组件的循环渲染"
+<repeat for="{{list}}" key="index" index="index" item="item">
+  <child :item="item"></child>
+</repeat>
+endsnippet
