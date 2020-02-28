@@ -11,10 +11,9 @@ class ComponentName extends wepy.page {
     // Page实例中存在的配置数据，对应于原生的page.json文件
   }
 
-  components = {
-    // 声明页面中所引用的组件，或声明组件中所引用的子组件
-    // id(小写): 组件
-  }
+  // 声明页面中所引用的组件，或声明组件中所引用的子组件
+  // id(小写): 组件
+  // components = { }
 
   // props = { }
 
