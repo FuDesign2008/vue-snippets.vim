@@ -15,6 +15,8 @@ class ComponentName extends wepy.app {
 
   // 对应原生 app.json 文件
   config = {
+    // 具体配置见 https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html
+    //
     pages: ['pages/index/index'],
     window: {
       // backgroundTextStyle: 'light',
@@ -22,6 +24,10 @@ class ComponentName extends wepy.app {
       // navigationBarTitleText: 'WeChat',
       // navigationBarTextStyle: 'black',
     },
+    usingComponents: {
+      // 全局自定义组件配置
+    },
+    // debug: true
   }
 
   globalData = {}

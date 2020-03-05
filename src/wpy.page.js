@@ -9,10 +9,16 @@ import wepy from 'wepy'
 class ComponentName extends wepy.page {
   config = {
     // Page实例中存在的配置数据，对应于原生的page.json文件
+    // 具体配置见 https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html#%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE
+    //
+    navigationBarTitleText: '导航栏标题',
+    usingComponents: {
+      // id(小写-_): 组件
+    },
   }
 
   // 声明页面中所引用的组件，或声明组件中所引用的子组件
-  // id(小写): 组件
+  // id(小写-_): 组件
   // components = { }
 
   // props = { }
