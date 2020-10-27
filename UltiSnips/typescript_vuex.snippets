@@ -7,7 +7,7 @@ snippet vuexModule "define vuex @Module"
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
-import axios, { AxiosResponse } from 'axios'
+import { getName } from '@/common/http/apis/name'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
 /* tslint:disable:member-ordering */
@@ -16,7 +16,7 @@ import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
   namespaced: true,
   stateFactory: true,
 })
-class `!v expand('%:t:r')` extends VuexModule {
+class `!v substitut(expand('%:t:r'), "^([a-z])", "\\U\\1" )` extends VuexModule {
   /**************************************************************************
    * state
    **************************************************************************/
@@ -28,7 +28,7 @@ class `!v expand('%:t:r')` extends VuexModule {
    * getters
    **************************************************************************/
 
-  get theName() {
+  get theName(): string {
     return this.name
   }
 
@@ -37,7 +37,7 @@ class `!v expand('%:t:r')` extends VuexModule {
    **************************************************************************/
 
   @Mutation
-  setName(name: string) {
+  setName(name: string): void {
     this.name = name
   }
 
@@ -46,32 +46,44 @@ class `!v expand('%:t:r')` extends VuexModule {
    **************************************************************************/
 
   @Action({
+    rawError: true,
     commit: 'setName'
   })
-  async fetchName() {
-    const url = 'TODO'
-    const response: AxiosResponse = await axios.get(url)
-    return response.data
+  async fetchName(params: string): Promise<string> {
+    const data = getName(params)
+    return data
   }
 }
 
-export default  `!v expand('%:t:r')`
+export default  `!v substitut(expand('%:t:r'), "^([a-z])", "\\U\\1" )`
 endsnippet
 
 
 snippet vuexMutation "define vuex @Mutation"
   @Mutation
-  setName(name: string) {
+  setName(name: string): void {
     this.name = name
   }
 endsnippet
 
 
-snippet vuexAction "define vuex @Action"
+snippet vuexAction "define vuex @Action with http module"
   @Action({
+    rawError: true,
     commit: 'setName'
   })
-  async fetchName() {
+  async fetchName(params: string): Promise<string> {
+    const data = getName(params)
+    return data
+  }
+endsnippet
+
+snippet vuexActionAxios "define vuex @Action with axios"
+  @Action({
+    rawError: true,
+    commit: 'setName'
+  })
+  async fetchName(params: string): Promise<string> {
     const url = 'TODO'
     const response: AxiosResponse = await axios.get(url)
     return response.data

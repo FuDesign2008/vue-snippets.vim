@@ -3,7 +3,7 @@
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
-import axios, { AxiosResponse } from 'axios'
+import { getName } from '@/common/http/apis/name'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
 /* tslint:disable:member-ordering */
@@ -23,7 +23,7 @@ class ModuleName extends VuexModule {
    * getters
    **************************************************************************/
 
-  get theName() {
+  get theName(): string {
     return this.name
   }
 
@@ -32,7 +32,7 @@ class ModuleName extends VuexModule {
    **************************************************************************/
 
   @Mutation
-  setName(name: string) {
+  setName(name: string): void {
     this.name = name
   }
 
@@ -40,11 +40,13 @@ class ModuleName extends VuexModule {
    * actions
    **************************************************************************/
 
-  @Action({ commit: 'setName' })
-  async fetchName() {
-    const url = 'TODO'
-    const response: AxiosResponse = await axios.get(url)
-    return response.data
+  @Action({
+    rawError: true,
+    commit: 'setName',
+  })
+  async fetchName(params: string): Promise<string> {
+    const data = getName(params)
+    return data
   }
 }
 
