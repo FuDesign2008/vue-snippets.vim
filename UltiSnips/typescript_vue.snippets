@@ -29,7 +29,7 @@ import Component /*, { mixins } */ from 'vue-class-component'
   // TODO
   // },
 })
-class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
+class `!v substitute(expand('%:t:r'), '\.comp', '', '')` extends Vue /*mixins(ComponentNameMixin) */ {
   /**************************************************************************
    * props
    **************************************************************************/
@@ -115,5 +115,5 @@ class `!v expand('%:t:r')` extends Vue /*mixins(ComponentNameMixin) */ {
   // destroyed():void {}
 }
 
-export default `!v expand('%:t:r')`
+export default `!v substitute(expand('%:t:r'), '\.comp', '', '')`
 endsnippet

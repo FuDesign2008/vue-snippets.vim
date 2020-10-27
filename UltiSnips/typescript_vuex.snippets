@@ -16,7 +16,7 @@ import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
   namespaced: true,
   stateFactory: true,
 })
-class `!v substitut(expand('%:t:r'), "^([a-z])", "\\U\\1" )` extends VuexModule {
+class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexModule {
   /**************************************************************************
    * state
    **************************************************************************/
@@ -55,7 +55,7 @@ class `!v substitut(expand('%:t:r'), "^([a-z])", "\\U\\1" )` extends VuexModule 
   }
 }
 
-export default  `!v substitut(expand('%:t:r'), "^([a-z])", "\\U\\1" )`
+export default  `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
 endsnippet
 
 
