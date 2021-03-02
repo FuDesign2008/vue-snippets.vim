@@ -6,7 +6,7 @@
 import { getName } from '@/common/http/apis/name'
 import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
-/* tslint:disable:member-ordering */
+/* eslint-disable @typescript-eslint/member-ordering */
 
 @Module({
   namespaced: true,
