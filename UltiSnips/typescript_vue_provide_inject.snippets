@@ -5,8 +5,8 @@ snippet Provideblock "vue @Provide block" b
    * provide
    **************************************************************************/
 
-  @Provide()
-  readonly name = 'value'
+  @Provide(symbol)
+  readonly name: string = 'value'
 
 endsnippet
 
@@ -15,20 +15,23 @@ snippet Injectblock "vue @Inject block" b
    * inject
    **************************************************************************/
 
-  @Inject()
+  @Inject({
+    from: symbol,
+    default: 'default'
+  })
   private readonly name!: string
 
 endsnippet
 
 snippet Provide "vue @Provide" b
   @Provide()
-  readonly name = 'value'
+  readonly name: string = 'value'
 
 endsnippet
 
 snippet Providesym "vue @Provide with symbol" b
   @Provide(symbol)
-  readonly name = 'value'
+  readonly name: string = 'value'
 
 endsnippet
 
