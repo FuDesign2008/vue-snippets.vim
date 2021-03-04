@@ -6,3 +6,31 @@ snippet Watch "use @Watch to monitor data change"
   }
 endsnippet
 
+snippet Watchimm "use @Watch to monitor data change with immediate option"
+  @Watch('dataName', {
+    immediate: true,
+  })
+  dataNameOnChange(newValue: string /*, oldValue: string*/): void {
+    // TODO
+  }
+endsnippet
+
+snippet Watchdeep "use @Watch to monitor data change with deep option"
+  @Watch('dataName', {
+    deep: true
+  })
+  dataNameOnChange(newValue: object /*, oldValue: object*/): void {
+    // TODO
+  }
+endsnippet
+
+snippet Watchall "use @Watch to monitor data change with all options"
+  @Watch('dataName', {
+    immediate: true,
+    deep: true
+  })
+  dataNameOnChange(newValue: object /*, oldValue: object*/): void {
+    // TODO
+  }
+endsnippet
+
