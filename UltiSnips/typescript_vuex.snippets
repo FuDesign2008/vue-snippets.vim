@@ -1,7 +1,111 @@
 
 extends typescript
 
-snippet vuexMod "define vuex dynamic @Module"
+
+snippet vuexMo "define vuex dynamic @Module factory"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
+import { Store } from 'vuex'
+import { getName } from '@/common/http/apis/name'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`(store: Store<any>) {
+
+  @Module({
+    namespaced: true,
+    stateFactory: true,
+    dynamic: true,
+    store,
+    name: '`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`'
+  })
+  class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexModule {
+    /**************************************************************************
+     * state
+     **************************************************************************/
+
+    name: string = ''
+    ${VISUAL}$0
+
+    /**************************************************************************
+     * getters
+     **************************************************************************/
+
+    get theName(): string {
+      return this.name
+    }
+
+    /**************************************************************************
+     * muations
+     **************************************************************************/
+
+    @Mutation
+    setName(name: string): void {
+      this.name = name
+    }
+
+    /**************************************************************************
+     * actions
+     **************************************************************************/
+
+    @Action({
+      rawError: true,
+      commit: 'setName',
+    })
+    async fetchName(params: string): Promise<string> {
+      const data = getName(params)
+      return data
+    }
+  }
+
+  return `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
+}
+endsnippet
+
+snippet vuexMod "define vuex dynamic @Module from factory"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { getModule } from 'vuex-module-decorators'
+import store from 'path/to/store' import { create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` } from '${VISUAL}$0../factory/`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`'
+
+const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`= create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`(store)
+const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store = getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
+
+export default `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store
+endsnippet
+
+snippet vuexModu "define vuex dynamic @Module override static"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { Store } from 'vuex'
+import { Module } from 'vuex-module-decorators'
+import Static`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` from '${VISUAL}$0/path/to/`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`(store: Store<any>) {
+  @Module({
+    namespaced: true,
+    dynamic: true,
+    stateFactory: true,
+    store,
+    name: '`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`',
+  })
+  class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends Static`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` {}
+
+  return `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
+}
+endsnippet
+
+snippet vuexModul "define vuex dynamic @Module"
 /**
  *
  * @author fuyg
@@ -63,7 +167,7 @@ class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexMod
 export default getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
 endsnippet
 
-snippet vuexModule "define vuex @Module"
+snippet vuexModule "define vuex static @Module"
 /**
  *
  * @author fuyg
