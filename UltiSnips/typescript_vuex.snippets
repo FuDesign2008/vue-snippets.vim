@@ -59,9 +59,8 @@ class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexMod
   }
 }
 
-const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store = getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
 
-export default  `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store
+export default getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
 endsnippet
 
 snippet vuexModule "define vuex @Module"
