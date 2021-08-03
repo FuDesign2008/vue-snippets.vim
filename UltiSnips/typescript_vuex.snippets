@@ -72,7 +72,8 @@ snippet vuexMod "define vuex dynamic @Module from factory"
  * @date  `date +%Y-%m-%d`
  */
 import { getModule } from 'vuex-module-decorators'
-import store from 'path/to/store' import { create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` } from '${VISUAL}$0../factory/`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`'
+import store from 'path/to/store'
+import { create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` } from '${VISUAL}$0../factory/`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`'
 
 const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`= create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`(store)
 const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store = getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
