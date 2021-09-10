@@ -5,7 +5,7 @@ snippet Propbool "vue @Prop: required Boolean " b
     type: Boolean,
     required: true
   })
-  private readonly propName!: boolean
+  private readonly ${0:propName}!: boolean
 
 endsnippet
 
@@ -14,7 +14,7 @@ snippet Propbooldef "vue @Prop: Boolean with default" b
     type: Boolean,
     default: false
   })
-  private readonly propName!:boolean
+  private readonly ${0:propName}!:boolean
 
 endsnippet
 
@@ -23,7 +23,7 @@ snippet Propnum "vue @Prop: required Number " b
     type: Number,
     required: true
   })
-  private readonly propName!: number
+  private readonly ${0:propName}!: number
 
 endsnippet
 
@@ -32,23 +32,23 @@ snippet Propnumdef "vue @Prop: Number with default" b
     type: Number,
     default: 0
   })
-  private readonly propName!: number
+  private readonly ${0:propName}!: number
 
 endsnippet
 
-snippet Propnumval "vue @Prop with Number validator" b
+snippet Propnumval "vue @Prop: Number with default and validator" b
   @Prop({
     type: Number,
     required: false,
     default: 0,
-    validator(value) {
+    validator(value): boolean {
       const validValues = [
         // TODO
       ]
       return validValues.include(value)
     },
   })
-  private readonly propName!: number
+  private readonly ${0:propName}!: number
 
 endsnippet
 
@@ -58,7 +58,7 @@ snippet Propstr "vue @Prop: required String " b
     type: String,
     required: true
   })
-  private readonly propName!: string
+  private readonly ${0:propName}!: string
 
 endsnippet
 
@@ -67,23 +67,23 @@ snippet Propstrdef "vue @Prop: String with default" b
     type: String,
     default: 'default'
   })
-  private readonly propName!:string
+  private readonly ${0:propName}!:string
 
 endsnippet
 
-snippet Propstrval "vue @Prop with String validator" b
+snippet Propstrval "vue @Prop: String with default and validator" b
   @Prop({
     type: String,
     required: false,
     default: 'default',
-    validator(value) {
+    validator(value): boolean {
       const validValues = [
         // TODO
       ]
       return validValues.include(value)
     },
   })
-  private readonly propName!:string
+  private readonly ${0:propName}!:string
 
 endsnippet
 
@@ -92,41 +92,41 @@ snippet Proparr "vue @Prop: required Array" b
     type: Array,
     required: true,
   })
-  private readonly propName!: any[]
+  private readonly ${1:propName}!: ${0:AsType[]}
 
 endsnippet
 
 snippet Proparrdef "vue @Prop: Array with default" b
   @Prop({
     type: Array,
-    default() {
+    default():$0 {
       const arr = [
         // TODO
       ]
       return arr
     }
   })
-  private readonly propName!: any[]
+  private readonly ${1:propName}!: ${0:AsType[]}
 
 endsnippet
 
-snippet Proparrval "vue @Prop with Array validator" b
+snippet Proparrval "vue @Prop: Array with default and validator" b
   @Prop({
     type: Array,
     required: false,
-    default() {
+    default(): $0 {
       const arr = [
         // TODO
       ]
       return arr
     },
-    validator(arr) {
+    validator(arr:$0): boolean {
       return arr.every((item) => {
         // TODO
       })
     },
   })
-  private readonly propName!: any[]
+  private readonly ${1:propName}!: ${0:AsType[]}
 
 endsnippet
 
@@ -135,36 +135,36 @@ snippet Propobj "vue @Prop: required Object" b
     type: Object,
     required: true,
   })
-  private readonly propName!: object
+  private readonly ${1:propName}!: ${0:AsType}
 
 endsnippet
 
 snippet Propobjdef "vue @Prop: Object with default" b
   @Prop({
     type: Object,
-    default: () => {
+    default: (): $0 => {
       return {
         // TODO
       }
     }
   })
-  private readonly propName!: object
+  private readonly ${1:propName}!: ${0:AsType}
 
 endsnippet
 
-snippet Propobjval "vue @Prop with Object validator" b
+snippet Propobjval "vue @Prop: Object with default and validator" b
   @Prop({
     type: Object,
-    default: () => {
+    default: (): $0 => {
       return {
         // TODO
       }
     },
-    validator(obj) {
+    validator(obj: $0): boolean {
       // TODO
     },
   })
-  private readonly propName!: object
+  private readonly ${1:propName}!: ${0:AsType}
 
 endsnippet
 
