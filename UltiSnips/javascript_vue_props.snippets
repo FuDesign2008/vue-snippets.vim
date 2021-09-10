@@ -1,6 +1,6 @@
 extends javascript
 
-snippet propbool "vue prop with required Boolean" b
+snippet propbool "vue prop: required Boolean" b
   propName: {
     type: Boolean,
     required: true
@@ -9,7 +9,7 @@ snippet propbool "vue prop with required Boolean" b
 endsnippet
 
 
-snippet propbooldef "vue prop with default Boolean" b
+snippet propbooldef "vue prop: Boolean with default" b
   propName: {
     type: Boolean,
     default: false,
@@ -18,7 +18,7 @@ snippet propbooldef "vue prop with default Boolean" b
 endsnippet
 
 
-snippet propnum "vue prop with required Number" b
+snippet propnum "vue prop: required Number" b
   propName: {
     type: Number,
     required: true
@@ -27,7 +27,7 @@ snippet propnum "vue prop with required Number" b
 endsnippet
 
 
-snippet propnumdef "vue prop with default Number" b
+snippet propnumdef "vue prop: Number with default" b
   propName: {
     type: Number,
     default: 0,
@@ -35,7 +35,7 @@ snippet propnumdef "vue prop with default Number" b
 
 endsnippet
 
-snippet propsnumval "vue prop with Number validator" b
+snippet propsnumval "vue prop: Number with default and validator" b
   propName: {
     type: Number,
     required: false,
@@ -51,7 +51,7 @@ snippet propsnumval "vue prop with Number validator" b
 endsnippet
 
 
-snippet propstr "vue prop  with required String" b
+snippet propstr "vue prop: required String" b
   propName: {
     type: String,
     required: true
@@ -59,7 +59,7 @@ snippet propstr "vue prop  with required String" b
 
 endsnippet
 
-snippet propstrdef "vue prop with default String" b
+snippet propstrdef "vue prop: String with default" b
   propName: {
     type: String,
     default: 'default',
@@ -67,7 +67,7 @@ snippet propstrdef "vue prop with default String" b
 
 endsnippet
 
-snippet propstrval "vue prop with String validator" b
+snippet propstrval "vue prop: String with default and validator" b
   propName: {
     type: String,
     required: false,
@@ -83,7 +83,7 @@ snippet propstrval "vue prop with String validator" b
 endsnippet
 
 
-snippet proparr "vue prop with required Array" b
+snippet proparr "vue prop: required Array" b
   propName: {
     type: Array,
     required: true
@@ -91,7 +91,7 @@ snippet proparr "vue prop with required Array" b
 
 endsnippet
 
-snippet proparrdef "vue prop with default Array" b
+snippet proparrdef "vue prop: Array with default" b
   propName: {
     type: Array,
     default() {
@@ -104,7 +104,7 @@ snippet proparrdef "vue prop with default Array" b
 
 endsnippet
 
-snippet proparrval "vue prop with Array validator" b
+snippet proparrval "vue prop: Array with default and validator" b
   propName: {
     type: Array,
     required: false,
@@ -123,14 +123,14 @@ snippet proparrval "vue prop with Array validator" b
 
 endsnippet
 
-snippet propobj "vue prop with required Object" b
+snippet propobj "vue prop: required Object" b
   propName: {
     type: Object,
     required: true
   },
 endsnippet
 
-snippet propobjdef "vue prop with default Object" b
+snippet propobjdef "vue prop: Object with default" b
   propName: {
     type: Object,
     default() {
@@ -143,7 +143,7 @@ endsnippet
 
 
 
-snippet propobjval "vue prop with Object validator" b
+snippet propobjval "vue prop: Object with default and validator" b
   propName: {
     type: Object,
     required: false,

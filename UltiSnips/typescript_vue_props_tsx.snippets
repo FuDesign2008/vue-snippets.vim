@@ -1,0 +1,79 @@
+extends typescript
+
+
+snippet propArr "vue prop: required Array as PropType" b
+  propName: {
+    type: Array as PropType<${0:AsType[]}>,
+    required: true
+  },
+
+endsnippet
+
+snippet propArrdef "vue prop: Array as PropType with default" b
+  propName: {
+    type: Array as PropType<${0:AsType[]}>,
+    default(): PropType<$0> {
+      const arr: $0 = [
+        // TODO
+      ]
+      return arr
+    },
+  },
+
+endsnippet
+
+snippet propArrval "vue prop: Array as PropType with default and validator" b
+  propName: {
+    type: Array as PropType<${0:AsType[]}>,
+    required: false,
+    default(): $0 {
+      const arr: $0 = [
+        // TODO
+      ]
+      return arr
+    },
+    validator(arr: $0) {
+      return arr.every((item) => {
+        // TODO
+      })
+    },
+  },
+
+endsnippet
+
+snippet propObj "vue prop: required Object as PropType" b
+  propName: {
+    type: Object as PropType<${0:AsType}>,
+    required: true
+  },
+endsnippet
+
+snippet propObjdef "vue prop: Object as PropType with default" b
+  propName: {
+    type: Object as PropType<${0:AsType}>,
+    default(): $0 {
+      return {
+        // TODO
+      }
+    },
+  },
+endsnippet
+
+
+
+snippet propObjval "vue prop: Object as PropType with default and validator" b
+  propName: {
+    type: Object as PropType<${0:AsType}>,
+    required: false,
+    default(): $0 {
+      return {
+        // TODO
+      }
+    },
+    validator(obj: $0) {
+      // TODO
+    },
+  },
+endsnippet
+
+
