@@ -6,11 +6,11 @@ extends typescript
 
 snippet axiosts "async get data with axios in ts" !
   @Action({commit: 'setData'})
-  async fetchData({ param }) {
+  async fetchData(params: Record<string, any>) {
     const url = 'TODO'
 
     const response:AxiosResponse = await axios.get(url, {
-      param,
+      params,
     })
     const { data } = response
     return data
@@ -19,11 +19,11 @@ endsnippet
 
 snippet axiospostts "async post data with axios in ts" b
   @Action({commit: 'setData'})
-  async postData({ param }) {
+  async postData( params: Record<string, any>) {
     const url = 'TODO'
 
     const response:AxiosResponse = await axios.post(url, {
-      param,
+      ...params,
     })
     const { data } = response
     return data
@@ -32,11 +32,11 @@ endsnippet
 
 snippet axiosputts "async put data with axios in ts" b
   @Action({commit: 'setData'})
-  async postData({ param }) {
+  async putData(params: Record<string, any>) {
     const url = 'TODO'
 
     const response:AxiosResponse = await axios.put(url, {
-      param,
+      ...params,
     })
     const { data } = response
     return data
@@ -45,7 +45,7 @@ endsnippet
 
 snippet axiosformts "async post form data  with axios in ts" !
   @Action({commit: 'setUploadedData'})
-  async uploadFormData({ uploadData }) {
+  async uploadFormData( uploadData: Record<string, any>) {
     const url = 'TODO'
 
     const formData = new FormData()
@@ -64,7 +64,10 @@ endsnippet
 
 snippet axiosfilets "async upload file with axios in ts" !
   @Action({commit: 'setUploadedFile'})
-  async uploadFile({ name, file }) {
+  async uploadFile({ name, file }: {
+    name: string,
+    file: string,
+  }) {
     const url = 'TODO'
 
     const formData = new FormData()
@@ -79,7 +82,7 @@ endsnippet
 
 snippet axiossearchts "async post URLSearchParams data with axios in ts" !
   @Action({commit: 'setUploadedData'})
-  async uploadData({ uploadData }) {
+  async uploadData( uploadData: Record<string, any>) {
     const url = 'TODO'
     const params = new URLSearchParams(uploadData)
 
@@ -92,7 +95,9 @@ endsnippet
 
 snippet axiosdelts "async delete data with axios in ts" !
   @Action({commit: 'removeData'})
-  async removeData({ value }) {
+  async removeData({ value }: {
+    value: string
+  }) {
     const url = 'TODO'
     const params = {
       data: {
