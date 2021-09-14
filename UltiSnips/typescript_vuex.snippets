@@ -2,7 +2,7 @@
 extends typescript
 
 
-snippet vuexMo "define vuex dynamic @Module factory"
+snippet vuexMo "define vuex dynamic @Module factory" b
 /**
  *
  * @author fuyg
@@ -55,8 +55,8 @@ export function create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
       rawError: true,
       commit: 'setName',
     })
-    async fetchName(params: string): Promise<string> {
-      const data = getName(params)
+    async fetchName(params: Record<string, any>): Promise<string> {
+      const data = await getName(params)
       return data
     }
   }
@@ -65,7 +65,7 @@ export function create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
 }
 endsnippet
 
-snippet vuexMod "define vuex dynamic @Module from factory"
+snippet vuexMod "define vuex dynamic @Module from factory" b
 /**
  *
  * @author fuyg
@@ -81,7 +81,7 @@ const `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store = getModul
 export default `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`Store
 endsnippet
 
-snippet vuexModu "define vuex dynamic @Module override static"
+snippet vuexModu "define vuex dynamic @Module override static" b
 /**
  *
  * @author fuyg
@@ -106,7 +106,7 @@ export function create`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
 }
 endsnippet
 
-snippet vuexModul "define vuex dynamic @Module"
+snippet vuexModul "define vuex dynamic @Module" b
 /**
  *
  * @author fuyg
@@ -158,8 +158,8 @@ class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexMod
     rawError: true,
     commit: 'setName'
   })
-  async fetchName(params: string): Promise<string> {
-    const data = getName(params)
+  async fetchName(params: Record<string, any>): Promise<string> {
+    const data = await getName(params)
     return data
   }
 }
@@ -168,7 +168,7 @@ class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexMod
 export default getModule(`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`)
 endsnippet
 
-snippet vuexModule "define vuex static @Module"
+snippet vuexModule "define vuex static @Module" b
 /**
  *
  * @author fuyg
@@ -216,8 +216,8 @@ class `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` extends VuexMod
     rawError: true,
     commit: 'setName'
   })
-  async fetchName(params: string): Promise<string> {
-    const data = getName(params)
+  async fetchName(params: Record<string, any>): Promise<string> {
+    const data = await getName(params)
     return data
   }
 }
@@ -226,21 +226,21 @@ export default  `!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')`
 endsnippet
 
 
-snippet vuexMutation "define vuex @Mutation"
+snippet vuexMutation "define vuex @Mutation" b
   @Mutation
-  setName(name: string): void {
-    this.name = name
+  setName(${0:name}: string): void {
+    this.$0 = $0
   }
 endsnippet
 
 
-snippet vuexAction "define vuex @Action with http module"
+snippet vuexAction "define vuex @Action with api module"
   @Action({
     rawError: true,
-    commit: 'setName'
+    commit: 'set$0'
   })
-  async fetchName(params: string): Promise<string> {
-    const data = getName(params)
+  async fetch${0:Name}(params: Record<string, any>): Promise<string> {
+    const data = await get$0(params)
     return data
   }
 endsnippet
@@ -248,11 +248,13 @@ endsnippet
 snippet vuexActionAxios "define vuex @Action with axios"
   @Action({
     rawError: true,
-    commit: 'setName'
+    commit: 'set$0'
   })
-  async fetchName(params: string): Promise<string> {
+  async fetch${0:Name}(params: Record<string, any>): Promise<string> {
     const url = 'TODO'
-    const response: AxiosResponse = await axios.get(url)
+    const response: AxiosResponse = await axios.get(url, {
+      params,
+    })
     return response.data
   }
 endsnippet
