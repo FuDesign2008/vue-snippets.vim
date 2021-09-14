@@ -4,7 +4,7 @@ extends typescript
 # axios
 #
 
-snippet axiosts "async get data with axios in ts" !
+snippet axiosts "async get data with axios in ts" b
   @Action({commit: 'setData'})
   async fetchData(params: Record<string, any>) {
     const url = 'TODO'
@@ -43,7 +43,7 @@ snippet axiosputts "async put data with axios in ts" b
   }
 endsnippet
 
-snippet axiosformts "async post form data  with axios in ts" !
+snippet axiosformts "async post form data  with axios in ts" b
   @Action({commit: 'setUploadedData'})
   async uploadFormData( uploadData: Record<string, any>) {
     const url = 'TODO'
@@ -62,7 +62,7 @@ snippet axiosformts "async post form data  with axios in ts" !
 endsnippet
 
 
-snippet axiosfilets "async upload file with axios in ts" !
+snippet axiosfilets "async upload file with axios in ts" b
   @Action({commit: 'setUploadedFile'})
   async uploadFile({ name, file }: {
     name: string,
@@ -80,7 +80,7 @@ snippet axiosfilets "async upload file with axios in ts" !
 endsnippet
 
 
-snippet axiossearchts "async post URLSearchParams data with axios in ts" !
+snippet axiossearchts "async post URLSearchParams data with axios in ts" b
   @Action({commit: 'setUploadedData'})
   async uploadData( uploadData: Record<string, any>) {
     const url = 'TODO'
@@ -93,7 +93,7 @@ snippet axiossearchts "async post URLSearchParams data with axios in ts" !
 endsnippet
 
 
-snippet axiosdelts "async delete data with axios in ts" !
+snippet axiosdelts "async delete data with axios in ts" b
   @Action({commit: 'removeData'})
   async removeData({ value }: {
     value: string
