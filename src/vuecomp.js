@@ -3,10 +3,11 @@
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
+import Vue from 'vue'
 // import { mapState, mapGetters, mapActions } from 'vuex'
 
-export default {
-  // name: '',
+export default Vue.extend({
+  name: '',
 
   // el: '#id',
 
@@ -63,4 +64,4 @@ export default {
   // updated() {},
   // beforeDestroy() {},
   // destroyed() {},
-}
+})

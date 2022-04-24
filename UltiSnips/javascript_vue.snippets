@@ -3,6 +3,8 @@ extends javascript
 
 #
 # vue
+# use Vue.extend() for  typescript support
+# @see https://v2.vuejs.org/v2/guide/typescript.html
 #
 
 snippet vuecomp  "create vue component" !
@@ -11,10 +13,12 @@ snippet vuecomp  "create vue component" !
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
+import Vue from 'vue'
 // import { mapState, mapGetters, mapActions } from 'vuex'
 
-export default {
-  // name: '',
+
+export default Vue.extend({
+  name: '`!v substitute(expand('%:t:r'), '\.comp', '', '')`',
 
   // el: '#id',
 
@@ -71,6 +75,6 @@ export default {
   // updated() {},
   // beforeDestroy() {},
   // destroyed() {},
-}
+})
 endsnippet
 
