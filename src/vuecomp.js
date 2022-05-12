@@ -54,14 +54,9 @@ export default Vue.extend({
   /**
    * life cycle
    */
-  // beforeCreate() {},
   created() {
     this.fetchData()
   },
-  // beforeMount() {},
   // mounted() {},
-  // beforeUpate() {},
-  // updated() {},
   // beforeDestroy() {},
-  // destroyed() {},
 })
