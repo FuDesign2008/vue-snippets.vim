@@ -9,8 +9,6 @@ import Vue from 'vue'
 export default Vue.extend({
   name: '',
 
-  // el: '#id',
-
   // components: {},
 
   // props: {},
