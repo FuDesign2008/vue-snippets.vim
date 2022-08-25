@@ -1,0 +1,47 @@
+
+extends typescript
+
+snippet vue3define "vue3 defineComponent in options api "
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: '`!v expand('%:t:r')`',
+
+  // components: {},
+
+  // props: {},
+
+
+  data() {
+    return {
+      // TODO
+    }
+  },
+
+  // computed: { },
+
+  // watch: { },
+
+  methods: {
+    async fetchData() {
+      // TODO
+    },
+    // TODO
+  },
+
+
+  /**
+   * life cycle
+   */
+  created() {
+    this.fetchData()
+  },
+  // mounted() {},
+  // beforeDestroy() {},
+})
+endsnippet

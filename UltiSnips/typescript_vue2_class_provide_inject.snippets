@@ -1,6 +1,6 @@
 extends typescript
 
-snippet Provideblock "vue @Provide block" b
+snippet Provideblock "vue2 @Provide block" b
   /**************************************************************************
    * provide
    **************************************************************************/
@@ -10,7 +10,7 @@ snippet Provideblock "vue @Provide block" b
 
 endsnippet
 
-snippet Injectblock "vue @Inject block" b
+snippet Injectblock "vue2 @Inject block" b
   /**************************************************************************
    * inject
    **************************************************************************/
@@ -23,31 +23,31 @@ snippet Injectblock "vue @Inject block" b
 
 endsnippet
 
-snippet Provide "vue @Provide" b
+snippet Provide "vue2 @Provide" b
   @Provide()
   readonly name: string = 'value'
 
 endsnippet
 
-snippet Providesym "vue @Provide with symbol" b
+snippet Providesym "vue2 @Provide with symbol" b
   @Provide(symbol)
   readonly name: string = 'value'
 
 endsnippet
 
-snippet Inject "vue @Inject" b
+snippet Inject "vue2 @Inject" b
   @Inject()
   private readonly name!: string
 
 endsnippet
 
-snippet Injectsym "vue @Inject with symbol" b
+snippet Injectsym "vue2 @Inject with symbol" b
   @Inject(symbol)
   private readonly name!: string
 
 endsnippet
 
-snippet Injectsymdef "vue @Inject with symbol and default value" b
+snippet Injectsymdef "vue2 @Inject with symbol and default value" b
   @Inject({
     from: symbol,
     default: 'default'
@@ -56,7 +56,7 @@ snippet Injectsymdef "vue @Inject with symbol and default value" b
 
 endsnippet
 
-snippet Injectsymdefarr "vue @Inject with symbol and default array" b
+snippet Injectsymdefarr "vue2 @Inject with symbol and default array" b
   @Inject({
     from: symbol,
     default() {
@@ -69,7 +69,7 @@ snippet Injectsymdefarr "vue @Inject with symbol and default array" b
 
 endsnippet
 
-snippet Injectsymdefobj "vue @Inject with symbol and default object" b
+snippet Injectsymdefobj "vue2 @Inject with symbol and default object" b
   @Inject({
     from: symbol,
     default() {
@@ -83,7 +83,7 @@ snippet Injectsymdefobj "vue @Inject with symbol and default object" b
 endsnippet
 
 
-snippet Injectdef "vue @Inject with default value" b
+snippet Injectdef "vue2 @Inject with default value" b
   @Inject({
     // from: 'name',
     default: 'default',
@@ -92,7 +92,7 @@ snippet Injectdef "vue @Inject with default value" b
 
 endsnippet
 
-snippet Injectdefobj "vue @Inject with default object" b
+snippet Injectdefobj "vue2 @Inject with default object" b
   @Inject({
     // from: 'name',
     default () {
@@ -105,7 +105,7 @@ snippet Injectdefobj "vue @Inject with default object" b
 
 endsnippet
 
-snippet Injectdefarr "vue @Inject with default array" b
+snippet Injectdefarr "vue2 @Inject with default array" b
   @Inject({
     // from: 'name',
     default () {

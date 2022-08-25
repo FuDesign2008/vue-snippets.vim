@@ -1,7 +1,7 @@
 extends typescript
 
 
-snippet propArr "vue prop: required Array as PropType" b
+snippet propArr "vue3 prop: required Array as PropType" b
   ${1:propName}: {
     type: Array as PropType<${0:AsType[]}>,
     required: true
@@ -9,7 +9,7 @@ snippet propArr "vue prop: required Array as PropType" b
 
 endsnippet
 
-snippet propArrdef "vue prop: Array as PropType with default" b
+snippet propArrdef "vue3 prop: Array as PropType with default" b
   ${1:propName}: {
     type: Array as PropType<${0:AsType[]}>,
     default(): PropType<$0> {
@@ -22,7 +22,7 @@ snippet propArrdef "vue prop: Array as PropType with default" b
 
 endsnippet
 
-snippet propArrval "vue prop: Array as PropType with default and validator" b
+snippet propArrval "vue3 prop: Array as PropType with default and validator" b
   ${1:propName}: {
     type: Array as PropType<${0:AsType[]}>,
     required: false,
@@ -41,14 +41,14 @@ snippet propArrval "vue prop: Array as PropType with default and validator" b
 
 endsnippet
 
-snippet propObj "vue prop: required Object as PropType" b
+snippet propObj "vue3 prop: required Object as PropType" b
   ${1:propName}: {
     type: Object as PropType<${0:AsType}>,
     required: true
   },
 endsnippet
 
-snippet propObjdef "vue prop: Object as PropType with default" b
+snippet propObjdef "vue3 prop: Object as PropType with default" b
   ${1:propName}: {
     type: Object as PropType<${0:AsType}>,
     default(): $0 {
@@ -61,7 +61,7 @@ endsnippet
 
 
 
-snippet propObjval "vue prop: Object as PropType with default and validator" b
+snippet propObjval "vue3 prop: Object as PropType with default and validator" b
   ${1:propName}: {
     type: Object as PropType<${0:AsType}>,
     required: false,
