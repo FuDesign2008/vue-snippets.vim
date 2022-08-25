@@ -10,7 +10,7 @@ snippet vue3define "vue3 defineComponent in options api "
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: '`!v expand('%:t:r')`',
+  name: '`!v substitute(expand('%:t:r'), '\.comp', '', '')`',
 
   // components: {},
 
