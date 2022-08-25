@@ -1,0 +1,22 @@
+
+extends javascript
+
+snippet pinia "pinia defineStore in options api"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import { defineStore } from 'pinia'
+
+export const use`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\u\1', '')` Store = defineStore('`!v substitute(expand('%:t:r'), '^\([a-z]\)', '\l\1', '')`', {
+  state: () => {
+    return {
+      // TODO
+    }
+  },
+  actions: {
+    // TODO
+  },
+})
+endsnippet
