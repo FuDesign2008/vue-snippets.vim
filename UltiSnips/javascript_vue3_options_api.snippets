@@ -1,7 +1,125 @@
 
-extends typescript
+extends javascript
 
-snippet vue3define "vue3 defineComponent in options api "
+snippet vue2defi "vue2 defineComponent with setup() for .vue"
+/**
+ *
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+import {
+    defineComponent,
+    // computed,
+    // toRefs,
+    // ref,
+    // inject,
+    // PropType,
+} from '@vue/composition-api'
+
+export default defineComponent({
+    name: '`!v substitute(expand('%:t:r'), '\.comp', '', '')`',
+
+    props: {
+        // TODO
+    },
+
+    setup(/*props, context*/) {
+        // TODO
+        return {
+            // TODO
+        }
+    },
+})
+endsnippet
+
+snippet vue3defi "vue3 defineComponent with setup() for .vue"
+/**
+ *
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+import {
+    defineComponent,
+    // computed,
+    // toRefs,
+    // ref,
+    // inject,
+    // PropType,
+} from 'vue'
+
+export default defineComponent({
+    name: '`!v substitute(expand('%:t:r'), '\.comp', '', '')`',
+
+    props: {
+        // TODO
+    },
+
+    setup(/*props, context*/) {
+        // TODO
+        return {
+            // TODO
+        }
+    },
+})
+endsnippet
+
+snippet vue2define "vue2 defineComponent in options api for .vue"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+import {
+    defineComponent,
+    // computed,
+    // toRefs,
+    // ref,
+    // inject,
+    // PropType,
+} from '@vue/composition-api'
+
+export default defineComponent({
+  name: '`!v substitute(expand('%:t:r'), '\.comp', '', '')`',
+
+  // components: {},
+
+  // props: {},
+
+
+  data() {
+    return {
+      // TODO
+    }
+  },
+
+  // computed: { },
+
+  // watch: { },
+
+  methods: {
+    async fetchData() {
+      // TODO
+    },
+    // TODO
+  },
+
+
+  /**
+   * life cycle
+   */
+  created() {
+    this.fetchData()
+  },
+  // mounted() {},
+  // beforeDestroy() {},
+})
+endsnippet
+
+snippet vue3define "vue3 defineComponent in options api for .vue"
 /**
  *
  * @author fuyg
