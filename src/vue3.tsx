@@ -18,9 +18,7 @@ import styles from './ComponentName.module.scss'
 export default defineComponent({
     name: 'ComponentName',
 
-    props: {
-        // TODO
-    },
+    // props: { },
 
     setup(/*props*/) {
         // TODO
@@ -37,7 +35,7 @@ export default defineComponent({
                     'component-name': true,
                     [styles.componentName]: true,
                 }}
-            ></div>
+            />
         )
     },
 })
