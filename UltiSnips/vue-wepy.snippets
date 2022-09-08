@@ -1,0 +1,61 @@
+
+extends vue
+
+snippet wpytempl "create .wpy with standalone javascript and style"
+<template>
+  <view class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./`!v expand('%:t:r')`.comp.js">
+</script>
+<style lang="scss" src="./`!v expand('%:t:r')`.comp.scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplts "create .wpy with standalone typescript and style"
+<template>
+  <view class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./`!v expand('%:t:r')`.comp.ts" lang="ts">
+</script>
+<style lang="scss" src="./`!v expand('%:t:r')`.comp.scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplate "create .wpy with standalone javascript"
+<template>
+  <view class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./`!v expand('%:t:r')`.comp.js">
+</script>
+<style lang="scss" scoped>
+
+</style>
+endsnippet
+
+snippet wpytemplate "create .wpy with standalone typescript"
+<template>
+  <view class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+    <!-- // TODO -->
+  </view>
+</template>
+<script src="./`!v expand('%:t:r')`.comp.ts" lang="ts">
+</script>
+<style lang="scss" scoped>
+
+</style>
+endsnippet
+
+
+snippet wpyrepeat "Wepy 组件的循环渲染"
+<repeat for="{{list}}" key="index" index="index" item="item">
+  <child :item="item"></child>
+</repeat>
+endsnippet

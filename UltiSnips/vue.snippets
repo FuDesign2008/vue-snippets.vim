@@ -2,37 +2,37 @@ extends vue
 
 snippet templ "create .vue with standalone javascript and style"
 <template>
-  <div class="component-name">
+  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
-<script src="./ComponentName.comp.js">
+<script src="./`!v expand('%:t:r')`.comp.js">
 </script>
-<style lang="scss" src="./ComponentName.comp.scss" scoped>
+<style lang="scss" src="./`!v expand('%:t:r')`.comp.scss" scoped>
 
 </style>
 endsnippet
 
 snippet templts "create .vue with standalone typescript and style"
 <template>
-  <div class="component-name">
+  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
-<script src="./ComponentName.comp.ts" lang="ts">
+<script src="./`!v expand('%:t:r')`.comp.ts" lang="ts">
 </script>
-<style lang="scss" src="./ComponentName.comp.scss" scoped>
+<style lang="scss" src="./`!v expand('%:t:r')`.comp.scss" scoped>
 
 </style>
 endsnippet
 
 snippet template "create .vue with standalone javascript"
 <template>
-  <div class="component-name">
+  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
-<script src="./ComponentName.comp.js">
+<script src="./`!v expand('%:t:r')`.comp.js">
 </script>
 <style lang="scss" scoped>
 
@@ -41,11 +41,11 @@ endsnippet
 
 snippet template "create .vue with standalone typescript"
 <template>
-  <div class="component-name">
+  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
-<script src="./ComponentName.comp.ts" lang="ts">
+<script src="./`!v expand('%:t:r')`.comp.ts" lang="ts">
 </script>
 <style lang="scss" scoped>
 
@@ -53,63 +53,3 @@ snippet template "create .vue with standalone typescript"
 endsnippet
 
 
-# 以下内容针对wepy
-
-snippet wpytempl "create .wpy with standalone javascript and style"
-<template>
-  <view class="component-name">
-    <!-- // TODO -->
-  </view>
-</template>
-<script src="./ComponentName.comp.js">
-</script>
-<style lang="scss" src="./ComponentName.comp.scss" scoped>
-
-</style>
-endsnippet
-
-snippet wpytemplts "create .wpy with standalone typescript and style"
-<template>
-  <view class="component-name">
-    <!-- // TODO -->
-  </view>
-</template>
-<script src="./ComponentName.comp.ts" lang="ts">
-</script>
-<style lang="scss" src="./ComponentName.comp.scss" scoped>
-
-</style>
-endsnippet
-
-snippet wpytemplate "create .wpy with standalone javascript"
-<template>
-  <view class="component-name">
-    <!-- // TODO -->
-  </view>
-</template>
-<script src="./ComponentName.comp.js">
-</script>
-<style lang="scss" scoped>
-
-</style>
-endsnippet
-
-snippet wpytemplate "create .wpy with standalone typescript"
-<template>
-  <view class="component-name">
-    <!-- // TODO -->
-  </view>
-</template>
-<script src="./ComponentName.comp.ts" lang="ts">
-</script>
-<style lang="scss" scoped>
-
-</style>
-endsnippet
-
-
-snippet wpyrepeat "Wepy 组件的循环渲染"
-<repeat for="{{list}}" key="index" index="index" item="item">
-  <child :item="item"></child>
-</repeat>
-endsnippet
