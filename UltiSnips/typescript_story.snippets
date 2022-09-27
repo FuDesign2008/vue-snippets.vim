@@ -2,7 +2,7 @@
 extends typescript
 
 snippet story "vue create story file in .tsx"
-import { ComponentName } from './ComponentName.vue'
+import  `!v substitute(expand('%:t:r'), '\.stories', '', '')`  from './`!v substitute(expand('%:t:r'), '\.stories', '', '')`.vue'
 import { Meta, StoryFn } from '@storybook/vue'
 
 export default {
@@ -23,9 +23,9 @@ const Template: StoryFn<typeof `!v substitute(expand('%:t:r'), '\.stories', '', 
             ...args,
         }
     },
-    template: `
+    template: \`
       <`!v substitute(expand('%:t:r'), '\.stories', '', '')` v-bind="args"/>
-    `,
+    \`,
 })
 
 export const `!v substitute(expand('%:t:r'), '\.stories', '', '')`Story = Template.bind({})
