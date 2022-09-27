@@ -1,0 +1,37 @@
+
+extends typescript
+
+snippet story "vue create story file in .tsx"
+import { ComponentName } from './ComponentName.vue'
+import { Meta, StoryFn } from '@storybook/vue'
+
+export default {
+    title: '`!v substitute(expand('%:t:r'), '\.stories', '', '')`',
+    component: `!v substitute(expand('%:t:r'), '\.stories', '', '')`,
+} as Meta<typeof `!v substitute(expand('%:t:r'), '\.stories', '', '')`>
+
+interface StoryArgs {
+    // TODO
+}
+
+const Template: StoryFn<typeof `!v substitute(expand('%:t:r'), '\.stories', '', '')`> = (args: StoryArgs) => ({
+    components: {
+        `!v substitute(expand('%:t:r'), '\.stories', '', '')`,
+    },
+    setup() {
+        return {
+            ...args,
+        }
+    },
+    template: `
+      <`!v substitute(expand('%:t:r'), '\.stories', '', '')` v-bind="args"/>
+    `,
+})
+
+export const `!v substitute(expand('%:t:r'), '\.stories', '', '')`Story = Template.bind({})
+
+`!v substitute(expand('%:t:r'), '\.stories', '', '')`Story.args = {
+    // TODO
+} as StoryArgs
+
+endsnippet
