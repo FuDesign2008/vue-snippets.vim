@@ -28,10 +28,10 @@ const Template: StoryFn<typeof `!v substitute(expand('%:t:r'), '\.stories', '', 
     \`,
 })
 
-export const `!v substitute(expand('%:t:r'), '\.stories', '', '')`Story = Template.bind({})
-
-`!v substitute(expand('%:t:r'), '\.stories', '', '')`Story.args = {
+export const Base = Template.bind({})
+const baseArgs: StoryArgs = {
     // TODO
-} as StoryArgs
+}
+Base.args = baseArgs
 
 endsnippet

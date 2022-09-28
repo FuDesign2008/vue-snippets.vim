@@ -24,8 +24,8 @@ const Template: StoryFn<typeof ComponentName> = (args: StoryArgs) => ({
     `,
 })
 
-export const ComponentNameStory = Template.bind({})
-
-ComponentNameStory.args = {
+export const Base = Template.bind({})
+const baseArgs: StoryArgs = {
     // TODO
-} as StoryArgs
+}
+Base.args = baseArgs
