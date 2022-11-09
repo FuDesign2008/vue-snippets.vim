@@ -18,6 +18,8 @@ import styles from './ComponentName.module.scss'
 export default defineComponent({
     name: 'ComponentName',
 
+    // emits: { },
+
     // props: { },
 
     setup(/*props*/) {
