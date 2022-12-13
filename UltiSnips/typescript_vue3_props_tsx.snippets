@@ -12,7 +12,7 @@ endsnippet
 snippet propArrdef "vue3 prop: Array as PropType with default" b
   ${1:propName}: {
     type: Array as PropType<${0:AsType[]}>,
-    default(): PropType<$0> {
+    default: (): $0 => {
       const arr: $0 = [
         // TODO
       ]
@@ -26,13 +26,13 @@ snippet propArrval "vue3 prop: Array as PropType with default and validator" b
   ${1:propName}: {
     type: Array as PropType<${0:AsType[]}>,
     required: false,
-    default(): $0 {
+    default: (): $0 =>  {
       const arr: $0 = [
         // TODO
       ]
       return arr
     },
-    validator(arr: $0): boolean {
+    validator: (arr: $0): boolean => {
       return arr.every((item) => {
         // TODO
       })
@@ -51,7 +51,7 @@ endsnippet
 snippet propObjdef "vue3 prop: Object as PropType with default" b
   ${1:propName}: {
     type: Object as PropType<${0:AsType}>,
-    default(): $0 {
+    default: (): $0 => {
       return {
         // TODO
       }
@@ -65,12 +65,12 @@ snippet propObjval "vue3 prop: Object as PropType with default and validator" b
   ${1:propName}: {
     type: Object as PropType<${0:AsType}>,
     required: false,
-    default(): $0 {
+    default: (): $0 => {
       return {
         // TODO
       }
     },
-    validator(obj: $0): boolean {
+    validator: (obj: $0): boolean => {
       // TODO
     },
   },
