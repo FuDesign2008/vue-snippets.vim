@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/FuDesign2008/vue-snippets#readme",
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "prettier": "^1.10.2"
