@@ -2,7 +2,7 @@ extends vue
 
 snippet temp "vue2 create .vue with Vue.extend()"
 <template>
-  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+  <div class="`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
@@ -48,13 +48,16 @@ snippet temp "vue2 create .vue with Vue.extend()"
   })
 </script>
 <style lang="less" scoped>
+.`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))` {
+
+}
 
 </style>
 endsnippet
 
 snippet templ "create .vue with standalone javascript and style"
 <template>
-  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+  <div class="`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
@@ -67,7 +70,7 @@ endsnippet
 
 snippet templts "create .vue with standalone typescript and style"
 <template>
-  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+  <div class="`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
@@ -80,26 +83,32 @@ endsnippet
 
 snippet template "create .vue with standalone javascript"
 <template>
-  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+  <div class="`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
 <script src="./`!v expand('%:t:r')`.comp.js">
 </script>
 <style lang="scss" scoped>
+.`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))` {
+
+}
 
 </style>
 endsnippet
 
 snippet templatets "create .vue with standalone typescript"
 <template>
-  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+  <div class="`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))`">
     <!-- // TODO -->
   </div>
 </template>
 <script src="./`!v expand('%:t:r')`.comp.ts" lang="ts">
 </script>
 <style lang="scss" scoped>
+.`!v tolower(substitute(expand('%:t:r'), '\C\([a-z]\)\([A-Z]\)', '\1-\2', 'g'))` {
+
+}
 
 </style>
 endsnippet
