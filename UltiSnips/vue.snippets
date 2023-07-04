@@ -1,5 +1,57 @@
 extends vue
 
+snippet temp "vue2 create .vue with Vue.extend()"
+<template>
+  <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
+    <!-- // TODO -->
+  </div>
+</template>
+<script>
+  import Vue from 'vue'
+  // import { mapState, mapGetters, mapActions } from 'vuex'
+
+
+  export default Vue.extend({
+    name: '`!v expand('%:t:r')',
+
+    // components: {},
+
+    // props: {},
+
+    // mixins: [],
+
+    data() {
+      return {
+        // TODO
+      }
+    },
+
+    computed: {
+      // TODO
+    },
+
+    watch: {
+      // TODO
+    },
+
+    methods: {
+      // TODO
+    },
+
+    /**
+     * life cycle
+     */
+    // beforeCreate() {},
+    // created() { },
+    // mounted() {},
+    // beforeDestroy() {},
+  })
+</script>
+<style lang="less" scoped>
+
+</style>
+endsnippet
+
 snippet templ "create .vue with standalone javascript and style"
 <template>
   <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
@@ -39,7 +91,7 @@ snippet template "create .vue with standalone javascript"
 </style>
 endsnippet
 
-snippet template "create .vue with standalone typescript"
+snippet templatets "create .vue with standalone typescript"
 <template>
   <div class="`!v tolower(substitute(expand('%:t:r'), 'C([a-z])([A-Z])', '-', 'g'))`">
     <!-- // TODO -->
